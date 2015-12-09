@@ -15,7 +15,7 @@ In the main project of the workspace add the SDK library dependency, go to the p
 Android studio
 --------------
 use ‘File > New > Import module’ & select the SDK project folder
-
+In the main module of the workspace add the SDK library dependency at the dependencies tab
 
 
 Add the following permissions to the main manifest.xml of your application
