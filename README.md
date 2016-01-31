@@ -66,3 +66,55 @@ add the following to the main manifest.xml within the <application> tag
         <action android:name="android.intent.action.MEDIA_BUTTON" />
     </intent-filter>
 </receiver>
+
+Interfaces
+----------
+IVlcPlaybackEvents interface definition of callback invoked when the player loads a new playlist or a new media file started playing. use audioRegisterPlaybackEvents/audioUnregisterPlaybackEvents methods to register for playback notifications
+
+void OnTrackStart(String title, String author, int lengthInMillis)
+A new media track has started playing
+void OnPlaylistLoaded(List<String> trackNames)
+A new playlist has downloaded listing its track titles
+
+Public methods
+----------
+void audioPlay()
+Starts / resumes playback
+
+void audioPrev()
+Starts playback of the previous track in the playlist
+
+void audioNext()
+Starts playback of the next track in the playlist
+
+void audioPause()
+Pauses playback
+
+void audioPlayAtIndex(int index)
+Starts playback of a specific track 
+
+
+boolean audioRegisterPlaybackEvents(IVlcPlaybackEvents rcv)
+void     audioUnregisterPlaybackEvents(IVlcPlaybackEvents rcv)
+methods for (un)registering for playback events
+
+void audioReleasePlayer()
+Releases resources associated with media player object
+
+boolean      audioIsPlaying()
+Checks whether the media player is playing
+
+int     audioGetProgress()
+Gets the current playback position in millisecods
+
+
+VlcMediaInfo  audioGetMediaInfo()
+returns track information. also see VlcMediaInfo definition
+
+internal Classes
+----------------
+VlcMediaInfo basic track information
+String mTitle track title
+String mAuthor track author
+int mLengthInMillis track duration in milliseconds
+String mPlaylistUrl track’s played is part of the given playlist URL
