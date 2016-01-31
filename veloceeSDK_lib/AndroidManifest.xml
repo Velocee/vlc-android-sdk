@@ -1,14 +1,14 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.velocee.sdk"
-    android:versionCode="112"
-    android:versionName="1.0.0.112" >
+    android:versionCode="114"
+    android:versionName="1.0.0.114" >
 
     <uses-sdk
         android:minSdkVersion="14"
         android:targetSdkVersion="23" />
     
     <uses-permission android:name="android.permission.INTERNET" />
-    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+<!--     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" /> -->
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     
     
