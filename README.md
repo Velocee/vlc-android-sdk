@@ -4,13 +4,9 @@ SDK Integration
 Project Integration
 -------------------
 The descriptions below include details and elaboration from the Quick Start section above.
-Download vlc-android-sdk as a zip file and extract it. Import the veloceeSDK_lib folder to the project (Import > Existing projects into workspace for Eclipse users or File > New > Import module for Android Studio)
+Download vlc-android-sdk as a zip file and extract it. Import the veloceeSDK_lib & veloceeSDK_UI_lib folder to the project (Import > Existing projects into workspace for Eclipse users or File > New > Import module for Android Studio)
 Update library dependency for the project (Project properties > Android > Add library for eclipse users or Main module settings > Dependencies > Add library for Android Studio)
-Add the following permissions to the main manifest.xml
-<uses-permission android:name="android.permission.INTERNET" />
-<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
-Add the following application service within the <application> tag
-<service android:name="com.velocee.sdk.VeloceeSDKService" />​
+
 
 The SDK uses the following third party libraries 
 GSON
@@ -78,6 +74,9 @@ A new playlist has downloaded listing its track titles
 
 Public methods
 ----------
+void startAudio()
+Opens a sample Velocee branded audio player activity
+
 void audioPlay()
 Starts / resumes playback
 
