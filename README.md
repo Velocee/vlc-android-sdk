@@ -4,7 +4,7 @@ SDK Integration
 Project Integration
 -------------------
 The descriptions below include details and elaboration from the Quick Start section above.
-Download vlc-android-sdk as a zip file and extract it. Import the veloceeSDK_lib & veloceeSDK_UI_lib folder to the project (Import > Existing projects into workspace for Eclipse users or File > New > Import module for Android Studio)
+Download vlc-android-sdk as a zip file and extract it. Import the veloceeSDK_lib (optional import: veloceeSDK_UI_lib - see Audio+ section) folder to the project (Import > Existing projects into workspace for Eclipse users or File > New > Import module for Android Studio)
 Update library dependency for the project (Project properties > Android > Add library for eclipse users or Main module settings > Dependencies > Add library for Android Studio)
 
 
@@ -46,10 +46,8 @@ Your application data needs to be labeled in order to fine tune Velocee's recomm
 Audio+ Integration
 ------------------
 The Velocee Audio+ module plays user adapted audio content to the user.
-In order to use the Audio+ module the application might include an audio player UI for the Audio+ module.
+In order to use the prebuilt Audio+ UI player in conjunction with Audio+ module import veloceeSDK_UI_lib library
 
-Get the Audio+ instance by calling VlcSDK.getMediaPlayerObj()
-returning an IVlcMediaPlayerSDK interface
 In order to be notified when a new playlist is dowloaded (so it may be played), call registerPlaybackEvents(IPlaybackEvents rcv)
 supplying an instance implementing OnPlaylistLoaded(List<String> trackNames)
 
@@ -92,6 +90,8 @@ Pauses playback
 void audioPlayAtIndex(int index)
 Starts playback of a specific track 
 
+void startAudio();
+Opens velocee sample audio player screen
 
 boolean audioRegisterPlaybackEvents(IVlcPlaybackEvents rcv)
 void     audioUnregisterPlaybackEvents(IVlcPlaybackEvents rcv)
