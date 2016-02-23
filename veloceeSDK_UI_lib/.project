@@ -3,6 +3,7 @@
 	<name>veloceeSDK_UI_lib</name>
 	<comment></comment>
 	<projects>
+		<project>veloceeSDK_lib</project>
 	</projects>
 	<buildSpec>
 		<buildCommand>

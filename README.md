@@ -4,7 +4,7 @@ SDK Integration
 Project Integration
 -------------------
 The descriptions below include details and elaboration from the Quick Start section above.
-Download vlc-android-sdk as a zip file and extract it. Import the veloceeSDK_lib (optional import: veloceeSDK_UI_lib - see Audio+ section) folder to the project (Import > Existing projects into workspace for Eclipse users or File > New > Import module for Android Studio)
+Download vlc-android-sdk as a zip file and extract it. Import the veloceeSDK_lib (optional import: veloceeSDK_UI_lib - see InstantRadio section) folder to the project (Import > Existing projects into workspace for Eclipse users or File > New > Import module for Android Studio)
 Update library dependency for the project (Project properties > Android > Add library for eclipse users or Main module settings > Dependencies > Add library for Android Studio)
 
 
@@ -43,10 +43,10 @@ Add Labels
 ----------
 Your application data needs to be labeled in order to fine tune Velocee's recommendation algorithm. Any text can be used as a label. In order to set the current label use the setTag method – void setTag(String tag) tag. Once a label is set it affects all resources until a new label is set or the application is idle for a period of time.
 
-Audio+ Integration
+InstantRadio Integration
 ------------------
-The Velocee Audio+ module plays user adapted audio content to the user.
-In order to use the prebuilt Audio+ UI player in conjunction with Audio+ module import veloceeSDK_UI_lib library
+The Velocee InstantRadio module plays user adapted audio content to the user.
+In order to use the prebuilt InstantRadio UI player in conjunction with InstantRadio module import veloceeSDK_UI_lib library
 
 In order to be notified when a new playlist is dowloaded (so it may be played), call registerPlaybackEvents(IPlaybackEvents rcv)
 supplying an instance implementing OnPlaylistLoaded(List<String> trackNames)
