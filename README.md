@@ -32,12 +32,14 @@ The Velocee SDK provides a WebView delegate for the application’s WebView to u
 WebViewClient vlcClient = VlcSdk.getObj().setDelegate(new MyWebViewClient());
 myWebView.setWebViewClient(vlcClient);
 
-Getting Cached Videos From Within a Different View
+Getting Cached items From Within a Different View
 --------------------------------------------------
 In order to use Velocee’s cache from non-webview view the application must change the relevant video urls to serve the content locally. The SDK provides several conversion methods for convenience:
  String getCachedResourceUrl(String originalUrl) receives the URL (as string) and returns the resource-from-cache URL.
 URL getCachedResourceUrlUrl(URL originalUrl)
 is similar to the above but receives and returns a URL instead of string. Both methods returns the input unchanged in case the input URL cannot be found in the cache.
+Bitmap getCachedResourceData(String originalUrl)
+	the URL (as string) and returns an image bitmap info in case the resource can be found in cache, null otherwise
 
 Add Labels
 ----------
