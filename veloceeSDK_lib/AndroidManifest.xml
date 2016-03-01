@@ -1,7 +1,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.velocee.sdk"
-    android:versionCode="134"
-    android:versionName="1.0.0.134" >
+    android:versionCode="136"
+    android:versionName="1.0.0.136" >
 
     <uses-sdk
         android:minSdkVersion="14"
