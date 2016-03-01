@@ -26,20 +26,22 @@ Initializing
 The library requires a one time initialization upon application startup. You should call the method VlcSdk.getObj().start preferably in your application.onCreate() method
 VlcSdk.getObj().start(getApplicationContext(),"sdk-key");
 
+
+Getting Cached items From Within a Native View
+--------------------------------------------------
+In order to use Velocee’s cache from non-webview view the application must change the relevant image & video urls to serve the content locally. The SDK provides several conversion methods for convenience:
+ String getCachedResourceUrl(String originalUrl) receives the URL (as string) and returns the resource-from-cache URL.
+URL getCachedResourceUrlUrl(URL originalUrl)
+is similar to the above but receives and returns a URL instead of string. Both methods returns the input unchanged in case the input URL cannot be found in the cache.
+Bitmap getCachedResourceData(String originalUrl)
+	the URL (as string) and returns an image bitmap info in case the resource can be found in cache, null otherwise
+
 Using Within a WebView
 ----------------------
 The Velocee SDK provides a WebView delegate for the application’s WebView to use. In order to use Velocee’s WebView delegate you should use the SDK’s setDelegate method instead of the web view one. In case the application has a webview delegate it will be chained.
 WebViewClient vlcClient = VlcSdk.getObj().setDelegate(new MyWebViewClient());
 myWebView.setWebViewClient(vlcClient);
 
-Getting Cached items From Within a Different View
---------------------------------------------------
-In order to use Velocee’s cache from non-webview view the application must change the relevant video urls to serve the content locally. The SDK provides several conversion methods for convenience:
- String getCachedResourceUrl(String originalUrl) receives the URL (as string) and returns the resource-from-cache URL.
-URL getCachedResourceUrlUrl(URL originalUrl)
-is similar to the above but receives and returns a URL instead of string. Both methods returns the input unchanged in case the input URL cannot be found in the cache.
-Bitmap getCachedResourceData(String originalUrl)
-	the URL (as string) and returns an image bitmap info in case the resource can be found in cache, null otherwise
 
 Add Labels
 ----------
